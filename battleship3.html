@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        :root {
+          --my-scale: 0.6;
+        }
+        body {
+            background-color: black;
+        }
+        table {
+            border-spacing: 0px;
+            /* could use border-collapse instead */
+            /* border-collapse: collapse; */
+            position: absolute;
+            left: calc(172px * var(--my-scale));
+            top: calc(98px * var(--my-scale));
+            cellspacing: 0;
+            cellpadding: 0;
+            border: none;
+        }
+        td, th {
+            width: calc(94px * var(--my-scale));
+            height: calc(94px * var(--my-scale));
+            //border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+        }
+        div#board {
+            background: url("board.jpg") no-repeat;
+            position: relative;
+            background-size: calc(1024px * var(--my-scale));
+            width: calc(1024px * var(--my-scale));
+            height: calc(863px * var(--my-scale));
+            margin: auto;
+        }
+        img {
+            width: calc(80px * var(--my-scale));
+        }
+        span {
+            color: white;
+        }
+        input {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<span>Количество кораблей: </span><input id="shipsQ" placeholder="Введите число от 1 до 9">
+<span>Длина корабля: </span><input id="shipsLen" placeholder="Введите число от 1 до 7">
+<button id="start" onclick="controller.start()"> Начать </button>
+<div id="board">
+    <table>
+        <tbody>
+        <tr>
+            <td onclick="controller.fire00()" id="00"></td>
+            <td onclick="controller.fire01()" id="01"></td>
+            <td onclick="controller.fire02()" id="02"></td>
+            <td onclick="controller.fire03()" id="03"></td>
+            <td onclick="controller.fire04()" id="04"></td>
+            <td onclick="controller.fire05()" id="05"></td>
+            <td onclick="controller.fire06()" id="06"></td>
+        </tr>
+        <tr>
+            <td onclick="controller.fire10()" id="10"></td>
+            <td onclick="controller.fire11()" id="11"></td>
+            <td onclick="controller.fire12()" id="12"></td>
+            <td onclick="controller.fire13()" id="13"></td>
+            <td onclick="controller.fire14()" id="14"></td>
+            <td onclick="controller.fire15()" id="15"></td>
+            <td onclick="controller.fire16()" id="16"></td>
+        </tr>
+        <tr>
+            <td onclick="controller.fire20()" id="20"></td>
+            <td onclick="controller.fire21()" id="21"></td>
+            <td onclick="controller.fire22()" id="22"></td>
+            <td onclick="controller.fire23()" id="23"></td>
+            <td onclick="controller.fire24()" id="24"></td>
+            <td onclick="controller.fire25()" id="25"></td>
+            <td onclick="controller.fire26()" id="26"></td>
+        </tr>
+        <tr>
+            <td onclick="controller.fire30()" id="30"></td>
+            <td onclick="controller.fire31()" id="31"></td>
+            <td onclick="controller.fire32()" id="32"></td>
+            <td onclick="controller.fire33()" id="33"></td>
+            <td onclick="controller.fire34()" id="34"></td>
+            <td onclick="controller.fire35()" id="35"></td>
+            <td onclick="controller.fire36()" id="36"></td>
+        </tr>
+        <tr>
+            <td onclick="controller.fire40()" id="40"></td>
+            <td onclick="controller.fire41()" id="41"></td>
+            <td onclick="controller.fire42()" id="42"></td>
+            <td onclick="controller.fire43()" id="43"></td>
+            <td onclick="controller.fire44()" id="44"></td>
+            <td onclick="controller.fire45()" id="45"></td>
+            <td onclick="controller.fire46()" id="46"></td>
+        </tr>
+        <tr>
+            <td onclick="controller.fire50()" id="50"></td>
+            <td onclick="controller.fire51()" id="51"></td>
+            <td onclick="controller.fire52()" id="52"></td>
+            <td onclick="controller.fire53()" id="53"></td>
+            <td onclick="controller.fire54()" id="54"></td>
+            <td onclick="controller.fire55()" id="55"></td>
+            <td onclick="controller.fire56()" id="56"></td>
+        </tr>
+        <tr>
+            <td onclick="controller.fire60()" id="60"></td>
+            <td onclick="controller.fire61()" id="61"></td>
+            <td onclick="controller.fire62()" id="62"></td>
+            <td onclick="controller.fire63()" id="63"></td>
+            <td onclick="controller.fire64()" id="64"></td>
+            <td onclick="controller.fire65()" id="65"></td>
+            <td onclick="controller.fire66()" id="66"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="battleship3.js"></script>
+</body>
+</html>
